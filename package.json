@@ -1,0 +1,23 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "first test",
+  "main": "script.js",
+  "scripts": {
+    "build": "browserify script.js > bundle.js && live-server",
+    "ser": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattoofahad/tester_WD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattoofahad/tester_WD/issues"
+  },
+  "homepage": "https://github.com/mattoofahad/tester_WD#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}
