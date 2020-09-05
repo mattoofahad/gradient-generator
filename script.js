@@ -1,3 +1,9 @@
+var _ = require('lodash');
+
+var array = [1,2,3,45,6,8,9,9];
+console.log('answer: ',_.without(array, 45));
+
+
 var css = document.querySelector("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
