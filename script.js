@@ -4,7 +4,10 @@ var degre = document.getElementById("deg");
 var av = document.getElementById("av");
 var st1 = document.getElementById("star");
 var ed1 = document.getElementById("endr");
-
+var st11 = document.getElementById("st11");
+var ed11 = document.getElementById("ed11");
+var col1 = document.getElementById("col1");
+var col2 = document.getElementById("col2");
 
 
 var color1 = document.querySelector(".color1");
@@ -25,6 +28,9 @@ function randomcolor(){
 function setColor(){
 	color1.value = randomcolor();
 	color2.value = randomcolor();
+	degre.value = Math.floor(Math.random()*360);
+	st1.value = Math.floor(Math.random()*35);
+	ed1.value = 100 - Math.floor(Math.random()*35);
 	setGradient();
 }
 
@@ -37,10 +43,14 @@ function setGradient() {
 
 	css1.textContent = body.style.background;
 	css2.textContent ="linear-gradient("+ degre.value +"deg,"+color1.value+" "+st1.value+"%,"+color2.value+" "+ed1.value+"%)";
-	av.textContent = "Current Value  : " + degre.value;
+	av.textContent = degre.value;
+	col1.textContent = color1.value;
+	col2.textContent = color2.value;
+	st11.textContent = st1.value;
+	ed11.textContent = ed1.value;
 }
 
-setGradient();
+window.onload = setColor;
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
@@ -52,4 +62,5 @@ ed1.addEventListener("change", setGradient);
 
 
 rancol.addEventListener("click", setColor);
+
 

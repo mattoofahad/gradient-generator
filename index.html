@@ -6,30 +6,36 @@
 </head>
 <body id="gradient">
 	<hr>
-	<h1>Gradient Generator V2.0.1</h1>
+	<h1>Gradient Generator
+		<h3>V2.0.3</h3>
+	</h1>
 	<hr>
-	<label><strong>Color</strong></label>
-	<p></p>
 	<div>
-		<input class="color1" type="color" name="color1" value="#4d746f">	
+		<label><strong id="col1"></strong></label>
+		<input class="color1" type="color" name="color1" value="#4d746f">
+		<label><strong>Color</strong></label>	
 		<input class="color2" type="color" name="color2" value="#bf9b27">
-		<p></p>
-		<button class="randomcol" type="button" name="button">Random</button>
-		
+		<label><strong id="col2"></strong></label>
 	</div>
 	<hr>
 	<div>
 		<label><strong>Angle(0-360)</strong></label>
 		<input id="deg" type="range" name="angle" value="90" min="0" max="360">
-		<h3 id='av'></h3>
+		<label><strong id='av'></strong></label>
 	</div>
 	<hr>
 	<div>
 		<label><strong>Start (0-100)%</strong></label>
 		<input id="star" type="range" name="sta" value="0" min="0" max="100">
+		<label><strong id="st11"></strong></label>
 		<p></p>
 		<label><strong>End  (0-100)%</strong></label>
 		<input id="endr" type="range" name="en" value="100" min="0" max="100">
+		<label><strong id="ed11"></strong></label>
+	</div>
+	<hr>
+	<div>
+		<button class="randomcol" type="button" name="button">Random</button>
 	</div>
 	<hr>
 	<div>
