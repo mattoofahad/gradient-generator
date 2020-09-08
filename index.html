@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gradient Background</title>
+	<title>Gradient Generator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body id="gradient">
-	<h1>Background Generator</h1>
-	<input class="color1" type="color" name="color1" value="#00ff00">
-	<input class="color2" type="color" name="color2" value="#ff0000">
+	<hr>
+	<h1>Gradient Generator</h1>
+	<hr>
+	<label><strong>Color</strong></label>
 	<p></p>
-	<button class="randomcol" type="button" name="button">Random Color</button>
+	<div>
+		<input class="color1" type="color" name="color1" value="#4d746f">	
+		<input class="color2" type="color" name="color2" value="#bf9b27">
+		<p></p>
+		<button class="randomcol" type="button" name="button">Random</button>
+		
+	</div>
+	<hr>
+	<div>
+		<label><strong>Angle(0-360)</strong></label>
+		<input id="deg" type="range" name="angle" value="90" min="0" max="360">
+		<h3 id='av'></h3>
+	</div>
+	<hr>
+	<div>
+		<label><strong>Start (0-100)%</strong></label>
+		<input id="star" type="range" name="sta" value="0" min="0" max="100">
+		<p></p>
+		<label><strong>End  (0-100)%</strong></label>
+		<input id="endr" type="range" name="en" value="100" min="0" max="100">
+	</div>
+	<hr>
+	<div>
 	<h2>Current CSS Background</h2>
-	<h3></h3>
+	<h3 id='hex'></h3>
+	<h3 id='deci'></h3>
+	</div>
+	<hr>
 	<script type="text/javascript" src="bundle.js"></script>
+
 </body>
 </html>
