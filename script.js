@@ -8,7 +8,7 @@ var st11 = document.getElementById("st11");
 var ed11 = document.getElementById("ed11");
 var col1 = document.getElementById("col1");
 var col2 = document.getElementById("col2");
-
+var but = document.getElementById("but");
 
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
@@ -19,12 +19,21 @@ var rancol = document.querySelector(".randomcol");
 var degok = document.querySelector(".degok");
 
 
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
 //random color generator
 function randomcolor(){
 	return "#000000".replace(/0/g,function(){return (Math.floor(Math.random()*16)).toString(16);});
 }
 
-//set color on the page
+//set color on the pag
 function setColor(){
 	color1.value = randomcolor();
 	color2.value = randomcolor();
@@ -36,18 +45,20 @@ function setColor(){
 
 //set gradient on the page
 function setGradient() {
-	console.log(st1.value);
-	console.log(ed1.value);
-
+	//console.log(st1.value);
+	//console.log(ed1.value);
 	body.style.background ="linear-gradient("+ degre.value +"deg,"+color1.value+" "+st1.value+"%,"+color2.value+" "+ed1.value+"%)";
-
 	css1.textContent = body.style.background;
-	css2.textContent ="linear-gradient("+ degre.value +"deg,"+color1.value+" "+st1.value+"%,"+color2.value+" "+ed1.value+"%)";
+	css2.textContent ="linear-gradient("+ degre.value +"deg,"+color1.value+" "+st1.value+"%,"+color2.value+" "+ed1.value+"%)  ";
 	av.textContent = degre.value;
 	col1.textContent = color1.value;
 	col2.textContent = color2.value;
 	st11.textContent = st1.value;
 	ed11.textContent = ed1.value;
+	//copyToClipboard(css1);
+}
+function copythis(){
+	copyToClipboard(css1)
 }
 
 window.onload = setColor;
@@ -62,5 +73,4 @@ ed1.addEventListener("change", setGradient);
 
 
 rancol.addEventListener("click", setColor);
-
-
+but.addEventListener("click", copythis);

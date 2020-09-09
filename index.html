@@ -7,43 +7,45 @@
 <body id="gradient">
 	<hr>
 	<h1>Gradient Generator
-		<h3>V2.0.3</h3>
+		<h3>V2.0.4</h3>
 	</h1>
 	<hr>
 	<div>
 		<label><strong id="col1"></strong></label>
-		<input class="color1" type="color" name="color1" value="#4d746f">
+		<input class="color1" type="color" name="color1">
 		<label><strong>Color</strong></label>	
-		<input class="color2" type="color" name="color2" value="#bf9b27">
+		<input class="color2" type="color" name="color2">
 		<label><strong id="col2"></strong></label>
 	</div>
 	<hr>
 	<div>
 		<label><strong>Angle(0-360)</strong></label>
-		<input id="deg" type="range" name="angle" value="90" min="0" max="360">
+		<input id="deg" type="range" name="angle" min="0" max="360">
 		<label><strong id='av'></strong></label>
 	</div>
 	<hr>
 	<div>
 		<label><strong>Start (0-100)%</strong></label>
-		<input id="star" type="range" name="sta" value="0" min="0" max="100">
+		<input id="star" type="range" name="sta" min="0" max="100">
 		<label><strong id="st11"></strong></label>
 		<p></p>
 		<label><strong>End  (0-100)%</strong></label>
-		<input id="endr" type="range" name="en" value="100" min="0" max="100">
+		<input id="endr" type="range" name="en" min="0" max="100">
 		<label><strong id="ed11"></strong></label>
 	</div>
 	<hr>
 	<div>
-		<button class="randomcol" type="button" name="button">Random</button>
+		<button class="randomcol" type="button" name="button">Random Generator</button>
 	</div>
 	<hr>
 	<div>
-	<h2>Current CSS Background</h2>
-	<h3 id='hex'></h3>
-	<h3 id='deci'></h3>
+		<h2>Current CSS Background</h2>
+		<h3 id='hex'></h3>
+		<h3 id='deci'></h3>
+		<button id="but" class="copybut">Copy</button>
 	</div>
 	<hr>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="bundle.js"></script>
 
 </body>
